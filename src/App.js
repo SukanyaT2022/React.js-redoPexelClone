@@ -31,15 +31,18 @@ const App = () => {
   },[])
 
   //step 3 above bring data inside data by using setData--data store inside datat state
-
+const dataCatch =(val)=>{
+    setData(val)
+}
   return (
     
     <div>
-<Search/>
+      {/* //below we sent datat fron search box to app.js */}
+    <Search onDataCatch = {dataCatch}/>
       <div className='parent'>
-      {/* //step4 map data --open consoloe photo-src-small
-data && if we have data run otherwise not run
-*/}
+        {/* //step4 map data --open consoloe photo-src-small
+        data && if we have data run otherwise not run
+        */}
         {data &&
           data.map((val) => {
             return(
